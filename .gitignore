@@ -1,2 +1,5 @@
-/libft.a
-*.o
+libft.a
+TAGS
+.objs
+
+test/cmocka
