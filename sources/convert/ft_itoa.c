@@ -6,7 +6,7 @@
 /*   By: world42 <world42@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 01:03:09 by world42           #+#    #+#             */
-/*   Updated: 2016/10/18 14:59:46 by ale-batt         ###   ########.fr       */
+/*   Updated: 2016/12/09 12:37:55 by ale-batt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ char				*ft_itoa(int n)
 	nb_l = n;
 	size = ft_size_chaine(n);
 	str = ft_strnew(size + 1);
-	ft_bzero(str, size + 1);
 	if (!str)
 		return (NULL);
 	if (nb_l == 0)

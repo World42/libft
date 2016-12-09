@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   array.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: world42  <ale-batt@student.42.fr>          +#+  +:+       +#+        */
+/*   By: world42 <world42@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/26 13:53:50 by world42           #+#    #+#             */
-/*   Updated: 2016/08/26 13:54:17 by world42          ###   ########.fr       */
+/*   Created: 2016/08/26 13:58:54 by world42           #+#    #+#             */
+/*   Updated: 2016/10/26 18:34:54 by ale-batt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@
 char		*ft_tabjoin(char **tab);
 void		ft_tabdel(char ***tab);
 int			ft_tablen(char **tab);
+void		ft_freetab(char **tab);
 
 #endif

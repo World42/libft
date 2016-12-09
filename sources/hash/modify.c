@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   modify.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: world42 <world42@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ale-batt <ale-batt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 17:32:21 by world42           #+#    #+#             */
-/*   Updated: 2016/09/12 17:25:10 by ale-batt         ###   ########.fr       */
+/*   Created: 2015/08/27 18:53:00 by ale-batt          #+#    #+#             */
+/*   Updated: 2016/10/31 15:30:54 by ale-batt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "hash.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+void	ft_modify_value(t_hash *hash, void *key, void *newvalue)
 {
-	int	i;
+	t_hash	*tmp;
 
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
-		i++;
-	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+	tmp = hash;
+	while (tmp)
+	{
+		if (ft_strcmp(tmp->key, key) == 0)
+		{
+			tmp->value = ft_strdup(newvalue);
+			break ;
+		}
+		tmp = tmp->next;
+	}
 }

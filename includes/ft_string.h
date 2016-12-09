@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   string.h                                           :+:      :+:    :+:   */
+/*   ft_string.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: world42 <world42@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/26 13:59:57 by world42           #+#    #+#             */
-/*   Updated: 2016/10/13 17:25:58 by ale-batt         ###   ########.fr       */
+/*   Created: 2016/08/26 13:58:37 by world42           #+#    #+#             */
+/*   Updated: 2016/12/09 12:40:50 by ale-batt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRING_H
-# define STRING_H
+#ifndef FT_STRING_H
+# define FT_STRING_H
 
+char		*ft_strajax(char *str);
 char		*ft_strcat(char *s1, const char *s2);
 char		*ft_strchr(const char *s, int c);
 void		ft_strclr(char *s);
@@ -28,6 +29,8 @@ void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 char		*ft_strjoin_char(const char *s1, char c, const char *s2);
 char		*ft_strjoin(const char *s1, const char *s2);
 char		*ft_strfjoin(char *s1, char *s2);
+char		*ft_strfljoin(char *s1, char *s2);
+char		*ft_strfrjoin(char *s1, char *s2);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *s);
 char		*ft_strmap(const char *s, char (*f)(char));

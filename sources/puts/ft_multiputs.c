@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_multiputs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: world42 <world42@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ale-batt <ale-batt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 17:32:21 by world42           #+#    #+#             */
-/*   Updated: 2016/09/12 17:25:10 by ale-batt         ###   ########.fr       */
+/*   Created: 2016/11/05 22:28:21 by ale-batt          #+#    #+#             */
+/*   Updated: 2016/12/08 13:27:42 by ale-batt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdarg.h>
 
-int	ft_strcmp(const char *s1, const char *s2)
+void	ft_multiputs(char *str, ...)
 {
-	int	i;
+	va_list	ap;
+	char	*tmp;
 
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
-		i++;
-	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+	va_start(ap, str);
+	ft_putstr(str);
+	while (42)
+	{
+		tmp = va_arg(ap, char *);
+		if (!tmp)
+			break ;
+		ft_putstr(tmp);
+	}
+	va_end(ap);
 }

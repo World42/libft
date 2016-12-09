@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   debug_print.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: world42 <world42@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ale-batt <ale-batt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 17:32:21 by world42           #+#    #+#             */
-/*   Updated: 2016/09/12 17:25:10 by ale-batt         ###   ########.fr       */
+/*   Created: 2016/01/25 15:20:10 by ale-batt          #+#    #+#             */
+/*   Updated: 2016/01/25 21:07:56 by ale-batt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
-{
-	int	i;
+/*
+**	open debug.txt with tail -f
+*/
 
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
-		i++;
-	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+void	set_debug_mode(int mode)
+{
+	if (mode == ON)
+		g_dbg = fopen("debug.txt", "a+");
+	else
+		fclose(g_dbg);
+}
+
+void	dbg_print(char *format)
+{
+	FILE *fp;
+
+	fp = fopen("debug.txt", "a+");
+	fprintf(fp, "%s", format);
+	fclose(fp);
 }

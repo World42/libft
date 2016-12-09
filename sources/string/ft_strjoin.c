@@ -6,7 +6,7 @@
 /*   By: world42 <world42@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 03:00:04 by world42           #+#    #+#             */
-/*   Updated: 2016/10/13 17:26:45 by ale-batt         ###   ########.fr       */
+/*   Updated: 2016/12/09 12:36:18 by ale-batt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,24 @@ char		*ft_strfjoin(char *s1, char *s2)
 
 	str = ft_strjoin(s1, s2);
 	free(s1);
+	free(s2);
+	return (str);
+}
+
+char		*ft_strfljoin(char *s1, char *s2)
+{
+	char	*str;
+
+	str = ft_strjoin(s1, s2);
+	free(s1);
+	return (str);
+}
+
+char		*ft_strfrjoin(char *s1, char *s2)
+{
+	char	*str;
+
+	str = ft_strjoin(s1, s2);
 	free(s2);
 	return (str);
 }

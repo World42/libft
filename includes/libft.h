@@ -6,7 +6,7 @@
 /*   By: world42 <world42@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/29 22:42:32 by world42           #+#    #+#             */
-/*   Updated: 2016/10/14 13:10:01 by ale-batt         ###   ########.fr       */
+/*   Updated: 2016/12/09 12:34:40 by ale-batt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 # include "array.h"
 # include "convert.h"
 # include "ctype.h"
+# include "get_next_line.h"
+# include "hash.h"
 # include "list.h"
 # include "llist.h"
 # include "match.h"
@@ -30,7 +32,7 @@
 # include "numbers.h"
 # include "puts.h"
 # include "rand.h"
-# include "string.h"
-# include "get_next_line.h"
+# include "ft_string.h"
+# include "debug.h"
 
 #endif

@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_debug.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: world42 <world42@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ale-batt <ale-batt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 17:32:21 by world42           #+#    #+#             */
-/*   Updated: 2016/09/12 17:25:10 by ale-batt         ###   ########.fr       */
+/*   Created: 2016/01/25 15:49:06 by ale-batt          #+#    #+#             */
+/*   Updated: 2016/10/26 18:36:08 by ale-batt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef DEBUG_H
+# define DEBUG_H
 
-int	ft_strcmp(const char *s1, const char *s2)
-{
-	int	i;
+# define ON 1
+# define OFF 0
 
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
-		i++;
-	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
-}
+# define DGB(mode) set_debug_mode(mode);
+
+FILE	*g_dbg;
+
+void	set_debug_mode(int mode);
+void	dbg_print(char *str);
+
+#endif
